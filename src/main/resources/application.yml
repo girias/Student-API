@@ -1,0 +1,16 @@
+spring:
+  profiles:
+  active: local
+  application:
+    name: StudentMicroService
+---
+spring:
+  profiles: local
+  data:
+    mongodb:
+      uri: localhost:27017/student?connectTimeoutMS=1000
+      username: mongouser
+      password: mongouser
+      database: student
+server:
+port: 8082
